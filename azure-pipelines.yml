@@ -20,3 +20,10 @@ steps:
     npm install
     npx webpack --config webpack.config.js
   displayName: 'npm install, run webpack'
+
+- task: FortifyScanCentralDAST@7
+  inputs:
+    scanCentralDastApiUrl: 'https://pentester:5001/api'
+    scanCentralCiCdToken: '4'
+    sscCiToken: 'cac97901-cef5-4597-94f1-ff444b979646'
+    TargetUrl: 'http://192.168.70.44:3000'
